@@ -10,4 +10,5 @@ public interface StudentService {
     ResponseEntity findStudentById(int id);
     ResponseEntity deleteStudentById(int id);
     ResponseEntity updateStudent(Student student);
+    ResponseEntity viewStudent();
 }

@@ -42,4 +42,9 @@ public class StudentServiceImpl implements StudentService {
         return new ResponseEntity(student, HttpStatus.OK);
     }
 
+    @Override
+    public ResponseEntity viewStudent() {
+        return new ResponseEntity(studentRepository.findAll(), HttpStatus.OK);
+    }
+
 }

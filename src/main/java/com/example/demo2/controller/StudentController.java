@@ -30,6 +30,10 @@ public class StudentController {
     public ResponseEntity<?> listClass() {
         return classYbService.viewClass() ;
     }
+    @GetMapping("/listStudent")
+    public ResponseEntity<?> listStudent() {
+        return studentService.viewStudent() ;
+    }
     @GetMapping("/findStudent")
     public ResponseEntity<?> findStudentById(@RequestParam("abcx")int id ) {
         return studentService.findStudentById(id) ;
