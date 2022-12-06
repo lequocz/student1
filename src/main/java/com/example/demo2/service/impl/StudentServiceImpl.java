@@ -38,13 +38,8 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public ResponseEntity updateStudent(Student student) {
-        Student student1;
-        student1 = studentRepository.findById(student.getId());
-        student1.setName(student.getName());
-        student1.setAge(student.getAge());
-        student1.setClassId(student.getClassId());
-        student1.setScoreId(student.getScoreId());
-        return new ResponseEntity(student1, HttpStatus.OK);
+        studentRepository.save(student);
+        return new ResponseEntity(student, HttpStatus.OK);
     }
 
 }
