@@ -4,6 +4,7 @@ import com.example.demo2.model.ClassYB;
 import com.example.demo2.model.Student;
 import com.example.demo2.repository.ClassRepository;
 import com.example.demo2.service.ClassYbService;
+import com.example.demo2.service.DetailStudentService;
 import com.example.demo2.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
@@ -36,15 +37,21 @@ public class StudentController {
         return studentService.viewStudent() ;
     }
     @GetMapping("/findStudent")
-    public ResponseEntity<?> findStudentById(@RequestParam("abcx")int id ) {
+    public ResponseEntity<?> findStudentById(@RequestParam("id")int id ) {
         return studentService.findStudentById(id) ;
     }
     @GetMapping("/deleteStudent")
-    public ResponseEntity<?> deleteStudentById(@RequestParam("abcx")int id ) {
+    public ResponseEntity<?> deleteStudentById(@RequestParam("id")int id ) {
         return studentService.deleteStudentById(id) ;
     }
     @PostMapping("/updateStudent")
     public ResponseEntity<?> updateStudent(@RequestBody Student student) {
         return studentService.updateStudent(student);
+    }
+    @Autowired
+    DetailStudentService detailStudentService;
+    @GetMapping("/detailStudent")
+    public ResponseEntity<?> detailStudentById(@RequestParam("id")int id ) {
+        return detailStudentService.findStudentById(id) ;
     }
 }

@@ -25,9 +25,9 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public ResponseEntity findStudentById(int id) {
-        Student student;
-        student = studentRepository.findById(id);
-        return new ResponseEntity(student, HttpStatus.OK);
+//        Student student;
+//        student = studentRepository.findById(id);
+        return new ResponseEntity(studentRepository.findById(id), HttpStatus.OK);
     }
 
     @Override

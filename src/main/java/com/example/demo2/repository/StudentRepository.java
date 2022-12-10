@@ -15,6 +15,6 @@ public interface StudentRepository extends JpaRepository<Student,Integer> {
     @Modifying
     @Query(value = "insert into student (id,age, class_id, name, score_id) values (:id,:age,:classId,:name,:scoreId)",nativeQuery = true)
     void create (@Param("id") int id,@Param("name") String name,@Param("age") int age,@Param("classId") int classId,@Param("scoreId") int scoreId);
-    @Query(value = "select * from student s where s.id =?1",nativeQuery = true)
+    @Query(value = "select * from student where id =?1",nativeQuery = true)
     Student findById(int id);
 }
