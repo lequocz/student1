@@ -19,14 +19,12 @@ public class StudentServiceImpl implements StudentService {
     }
     @Override
     public ResponseEntity createStudent2(Student student){
-         studentRepository.create(student.getId(),student.getName(),student.getAge(),student.getClassId(),student.getScoreId());
+         studentRepository.create(student.getId(),student.getName(),student.getAge(),student.getClassId());
         return new ResponseEntity(student, HttpStatus.OK);
     }
 
     @Override
     public ResponseEntity findStudentById(int id) {
-//        Student student;
-//        student = studentRepository.findById(id);
         return new ResponseEntity(studentRepository.findById(id), HttpStatus.OK);
     }
 
