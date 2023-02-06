@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 public interface ScoreService {
     ResponseEntity getAll();
+    ResponseEntity getAvg();
     ResponseEntity createScore( int id);
     ResponseEntity findScore( int id);
     ResponseEntity updateScore(Score score);

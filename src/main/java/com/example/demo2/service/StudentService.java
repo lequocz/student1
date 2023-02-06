@@ -11,4 +11,7 @@ public interface StudentService {
     ResponseEntity deleteStudentById(int id);
     ResponseEntity updateStudent(Student student);
     ResponseEntity viewStudent();
+    ResponseEntity getSchStudent(int id);
+    ResponseEntity getListSchStudent();
+
 }

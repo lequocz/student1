@@ -6,15 +6,38 @@ import com.example.demo2.service.ScoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.SqlOutParameter;
+import org.springframework.jdbc.core.SqlParameter;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 import org.springframework.stereotype.Service;
+
+import java.lang.reflect.Type;
+import java.sql.Types;
+import java.util.Map;
 
 @Service
 public class ScoreServiceImpl implements ScoreService {
     @Autowired
     ScoreRepository scoreRepository;
+    @Autowired
+    JdbcTemplate jdbcTemplate;
     @Override
     public ResponseEntity<?> getAll(){
         return new ResponseEntity<>(scoreRepository.findAll(),HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity<?> getAvg() {
+        SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withProcedureName("revenue_student")
+        .declareParameters(new SqlParameter("stuId", Types.INTEGER))
+        .declareParameters(new SqlOutParameter("average",Types.VARCHAR));
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+        mapSqlParameterSource.addValue("stuId",1);
+        Map<String,Object> map = simpleJdbcCall.execute(mapSqlParameterSource);
+        String avg = map.get("average").toString() ;
+        return new ResponseEntity(avg, HttpStatus.OK);
     }
 
     @Override

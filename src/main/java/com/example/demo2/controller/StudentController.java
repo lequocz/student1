@@ -3,6 +3,7 @@ package com.example.demo2.controller;
 import com.example.demo2.model.ClassYB;
 import com.example.demo2.model.Score;
 import com.example.demo2.model.Student;
+import com.example.demo2.repository.AvgStudentRepo;
 import com.example.demo2.repository.ClassRepository;
 import com.example.demo2.repository.ScoreRepository;
 import com.example.demo2.repository.SubjectRepo;
@@ -26,7 +27,17 @@ public class StudentController {
     @Autowired
     SubjectRepo subjectRepo;
     @Autowired
+    AvgStudentRepo avgStudentRepo;
+    @GetMapping("/getAvg")
+    public ResponseEntity<?> getAvg(@RequestParam("id") String id) {
+        return new ResponseEntity<>( avgStudentRepo.revenue_student(id),HttpStatus.OK );
+    }
+    @Autowired
     ScoreService scoreService;
+//    @GetMapping("/getAvg")
+//    public ResponseEntity<?> getAvg() {
+//        return scoreService.getAvg() ;
+//    }
     @PostMapping("/saveScore")
     public ResponseEntity<?> saveScore(@RequestBody Score score) {
         return scoreService.updateScore(score);
@@ -80,5 +91,13 @@ public class StudentController {
     @GetMapping("/detailStudent")
     public ResponseEntity<?> detailStudentById(@RequestParam("id")int id ) {
         return detailStudentService.findStudentById(id) ;
+    }
+    @GetMapping("/findTestchById")
+    public ResponseEntity<?> findTestchById(@RequestParam("id")int id ) {
+        return studentService.getSchStudent(id) ;
+    }
+    @GetMapping("/getListTesch")
+    public ResponseEntity<?> getListTesch() {
+        return studentService.getListSchStudent() ;
     }
 }
