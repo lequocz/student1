@@ -1,0 +1,42 @@
+Manifest-Version: 1.0
+Main-Class: com.example.demo2.Demo2Application
+Class-Path: spring-jdbc-5.3.23.jar spring-context-5.3.23.jar netty-resol
+ ver-dns-classes-macos-4.1.84.Final.jar jakarta.activation-1.2.2.jar jak
+ arta.activation-api-1.2.2.jar spring-boot-2.6.13.jar jjwt-0.9.1.jar jax
+ b-runtime-2.3.7.jar netty-resolver-dns-4.1.84.Final.jar lombok-1.18.24.
+ jar jakarta.transaction-api-1.3.3.jar spring-security-web-5.6.8.jar log
+ back-classic-1.2.11.jar spring-data-commons-2.6.9.jar netty-transport-n
+ ative-unix-common-4.1.84.Final.jar reactor-core-3.4.24.jar spring-beans
+ -5.3.23.jar HikariCP-4.0.3.jar netty-transport-4.1.84.Final.jar spring-
+ webflux-5.3.23.jar spring-orm-5.3.23.jar netty-resolver-dns-native-maco
+ s-4.1.84.Final-osx-x86_64.jar spring-expression-5.3.23.jar jackson-data
+ type-jdk8-2.13.4.jar netty-codec-4.1.84.Final.jar netty-codec-dns-4.1.8
+ 4.Final.jar spring-boot-starter-json-2.6.13.jar jackson-module-paramete
+ r-names-2.13.4.jar tomcat-embed-websocket-9.0.68.jar antlr-2.7.7.jar sp
+ ring-security-core-5.7.5.jar spring-boot-starter-webflux-2.6.13.jar jul
+ -to-slf4j-1.7.36.jar netty-resolver-4.1.84.Final.jar jandex-2.4.2.Final
+ .jar spring-boot-starter-web-2.6.13.jar spring-boot-starter-data-jpa-2.
+ 6.13.jar jakarta.annotation-api-1.3.5.jar logback-core-1.2.11.jar netty
+ -common-4.1.84.Final.jar reactor-netty-core-1.0.24.jar log4j-api-2.17.2
+ .jar jackson-datatype-jsr310-2.13.4.jar tomcat-embed-el-9.0.68.jar jaka
+ rta.persistence-api-2.2.3.jar netty-buffer-4.1.84.Final.jar hibernate-c
+ ore-5.6.12.Final.jar spring-aop-5.3.23.jar spring-boot-starter-aop-2.6.
+ 13.jar spring-security-config-5.6.8.jar spring-data-jpa-2.6.9.jar jacks
+ on-annotations-2.13.4.jar spring-webmvc-5.3.23.jar jackson-databind-2.1
+ 3.4.2.jar spring-boot-autoconfigure-2.6.13.jar tomcat-embed-core-9.0.68
+ .jar spring-boot-starter-2.6.13.jar netty-transport-native-epoll-4.1.84
+ .Final-linux-x86_64.jar netty-transport-classes-epoll-4.1.84.Final.jar 
+ spring-tx-5.3.23.jar aspectjweaver-1.9.7.jar netty-codec-socks-4.1.84.F
+ inal.jar spring-boot-starter-reactor-netty-2.6.13.jar istack-commons-ru
+ ntime-3.0.12.jar netty-codec-http2-4.1.84.Final.jar netty-handler-4.1.8
+ 4.Final.jar jakarta.xml.bind-api-2.3.3.jar spring-web-5.3.23.jar txw2-2
+ .3.7.jar spring-aspects-5.3.23.jar spring-core-5.3.23.jar spring-boot-s
+ tarter-logging-2.6.13.jar spring-boot-starter-tomcat-2.6.13.jar netty-c
+ odec-http-4.1.84.Final.jar log4j-to-slf4j-2.17.2.jar slf4j-api-1.7.36.j
+ ar hibernate-commons-annotations-5.1.2.Final.jar jboss-logging-3.4.3.Fi
+ nal.jar jackson-core-2.13.4.jar mysql-connector-j-8.0.31.jar classmate-
+ 1.5.1.jar snakeyaml-1.29.jar spring-boot-starter-jdbc-2.6.13.jar reacti
+ ve-streams-1.0.4.jar spring-security-crypto-5.6.8.jar spring-jcl-5.3.23
+ .jar netty-handler-proxy-4.1.84.Final.jar spring-boot-starter-security-
+ 2.6.3.jar byte-buddy-1.11.22.jar reactor-netty-http-1.0.24.jar
+
